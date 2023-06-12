@@ -56,6 +56,7 @@
                 break;
             case PLAYERX_WON:
                 announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+                break;
             case DRAW: 
                 announcer.innerText = 'Draw';
         }
@@ -114,4 +115,3 @@
     resetButton.addEventListener('click', resetBoard);
 
     resetBoard();
-
