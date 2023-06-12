@@ -2,6 +2,7 @@
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('.reset');
     const announcer = document.querySelector('.announcer');
+    const display = document.querySelector('.display');
 
     let board = ['', '', '', '', '', '', '', '', ''];
     let currentPlayer = 'X';
@@ -52,13 +53,16 @@
     const announce = (type) => {
         switch(type) {
             case PLAYERO_WON:
-                announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+                announcer.innerHTML = 'Player <span class="playerO">O</span> Won!';
+                display.style.opacity = '0';
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+                announcer.innerHTML = 'Player <span class="playerX">X</span> Won!';
+                display.style.opacity = '0';
                 break;
             case DRAW: 
-                announcer.innerText = 'Draw';
+                announcer.innerText = 'DRAW!';
+                display.style.opacity = '0';
         }
         announcer.classList.remove('hide');
     };
@@ -96,6 +100,7 @@
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true; 
         announcer.classList.add('hide');
+        display.style.opacity = '1';
 
         if (currentPlayer === 'O') {
             changePlayer();

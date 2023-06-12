@@ -31,7 +31,7 @@
     display: none;
 }
 
-.container  {
+.container {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,9 +73,10 @@
 
 .announcer {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -55px;
+    margin-bottom: 20px;
 }
 
 .reset {
@@ -89,4 +90,14 @@
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
+    transition: all 0.2s cubic-bezier(.86, .01, .15, .99);
+}
+
+.reset:hover {
+    transform: scaleX(1.05) scaleY(1.05);
+}
+
+.reset:active {
+    transition: 0.1s;
+    transform: translateY(2px);
 }
