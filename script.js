@@ -1,3 +1,4 @@
+    // Declaring variables
     const tiles = Array.from(document.querySelectorAll('.tile'));
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('.reset');
@@ -12,6 +13,7 @@
     const PLAYERO_WON = 'PLAYERO_WON'; 
     const DRAW = 'DRAW';
 
+    // Represents the winning conditions for the game
     const winningConditions = [
         [0, 1, 2],
         [3, 4, 5],
@@ -23,6 +25,8 @@
         [2, 4, 6]
     ];
 
+    // Handles the validation of the game result, checking for a winning condition 
+    // or a draw, and updating the game state accordingly
     function handleResultValidation() {
         let roundWon = false;
         for (let i = 0; i <= 7; i++) {
@@ -49,7 +53,8 @@
         announce(DRAW);
     }
 };
-
+    
+    // Announces the result of the game based on the given type
     const announce = (type) => {
         switch(type) {
             case PLAYERO_WON:
@@ -67,6 +72,7 @@
         announcer.classList.remove('hide');
     };
 
+    // Validates if the given tile is a valid action
     const isValidAction = (tile) => {
         if (tile.innerText === 'X' || tile.innerText === 'O') {
             return false;
@@ -75,10 +81,12 @@
         return true;
     };
 
+    // Updates the game board with the current player's mark at the specified index
     const updateBoard = (index) => {
         board[index] = currentPlayer;
     }
 
+    // Changes the current player in the game
     const changePlayer = () => {
         playerDisplay.classList.remove(`player${currentPlayer}`);
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
@@ -86,6 +94,7 @@
         playerDisplay.classList.add(`player${currentPlayer}`);
     };
 
+    // Handles a user action in the game
     const userAction = (tile, index) => {
         if(isValidAction(tile) && isGameActive) {
             tile.innerText = currentPlayer;
@@ -96,6 +105,7 @@
         }
     };
 
+    // Resets the game board and related variables to their initial state
     const resetBoard = () => {
         board = ['', '', '', '', '', '', '', '', ''];
         isGameActive = true; 
@@ -113,10 +123,13 @@
         });
     }
 
+    // Adds click event listeners to each tile element to handle user actions
     tiles.forEach((tile, index) => {
         tile.addEventListener('click', () => userAction(tile, index));
     });
 
+    // Adds a click event listener to the resetButton element to reset the game board
     resetButton.addEventListener('click', resetBoard);
 
+    // Calls the resetBoard() function
     resetBoard();

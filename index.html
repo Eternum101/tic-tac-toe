@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/87161b5108.js" crossorigin="anonymous"></script>
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
-<main class="background">
+<!--Main Section-->
+<main class="main">
     <div class="title">
         <h1>TIC-TAC-TOE</h1>
     </div>
+<!--Display Section-->
     <div class="display">
         Player
         <span class="display-player playerX">X</span>'s Turn
     </div>
     <div class="announcer hide"></div>
+<!--Grid/Tile Section-->
     <div class="container">
         <div class="tile"></div>
         <div class="tile"></div>
@@ -32,6 +36,15 @@
         <button class="reset">RESET GAME</button>
     </div>
 </main>
+<!--Footer Section-->
+<footer>
+    <p>Copyright @ 
+        <script>document.write(new Date().getFullYear())</script> 
+    Eternum101</p>
+    <a href="https://github.com/Eternum101" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+    </a>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
