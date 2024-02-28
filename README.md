@@ -17,16 +17,13 @@ A Variation of the Tic-Tac-Toe Game.
 ## Screenshots
 
 ### Initial Screen
-![](screenshots/initial-screen-etch-a-sketch.png)
+![](screenshots/initial-screen-tic-tac-toe.png)
 
-### Colour Mode
-![](screenshots/colour-mode-etch-a-sketch.png)
+### Draw Result
+![](screenshots/draw-result-tic-tac-toe.png)
 
-### Rainbow Mode
-![](screenshots/rainbow-mode-etch-a-sketch.png)
-
-### Grid Adjustability
-![](screenshots/grid-adjustability-etch-a-sketch.png)
+### Overall Result
+![](screenshots/result-tic-tac-toe.png)
 
 [Back to Top](#tic-tac-toe)
 
