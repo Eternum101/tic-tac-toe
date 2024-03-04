@@ -1,9 +1,6 @@
-# tic-tac-toe
-A Variation of the Tic-Tac-Toe Game That You Can Play in the Browser
-
 # Tic Tac Toe
 
-View Demo
+🔗 [View Demo](https://eternum101.github.io/tic-tac-toe/)
 
 ## Table of Contents
 - [About The Project](#about-the-project)
